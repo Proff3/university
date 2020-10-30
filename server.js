@@ -20,6 +20,14 @@ var config = {
     }
 }
 
+var connection = new Connection(config);
+connection.on('connect', function (err) {
+    if (err) {
+        console.log(err)
+    } else {
+        console.log('Connected');
+    }
+})
 
 app.get('/', function (req, res) {
     res.send('Hello World!')
@@ -30,11 +38,3 @@ app.get('/', function (req, res) {
 
 
 
-// var connection = new Connection(config);
-// connection.on('connect', function (err) {
-//     if (err) {
-//         console.log(err)
-//     } else {
-//         console.log('Connected');
-//     }
-// })
