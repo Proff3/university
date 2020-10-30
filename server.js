@@ -5,6 +5,20 @@ var Request = require('tedious').Request;
 
 app.listen(5000);
 
+var config = {
+    server: 'localhost',    //the IP of the machine where SQL Server runs
+    authentication: {
+        type: 'default',
+        options: {
+            userName: 'sa', // update me
+            password: 'masterkey', // update me
+        }
+    },
+    options: {
+        encrypt: false,
+        database: 'AbonentPlus',  //the username above should have granted permissions in order to access this DB.
+    }
+}
 
 
 app.get('/', function (req, res) {
@@ -14,20 +28,7 @@ app.get('/', function (req, res) {
 
 
 
-// var config = {
-//     server: 'localhost',    //the IP of the machine where SQL Server runs
-//     authentication: {
-//         type: 'default',
-//         options: {
-//             userName: 'sa', // update me
-//             password: 'masterkey', // update me
-//         }
-//     },
-//     options: {
-//         encrypt: false,
-//         //database: 'AbonentPlus',  //the username above should have granted permissions in order to access this DB.
-//     }
-// }
+
 
 // var connection = new Connection(config);
 // connection.on('connect', function (err) {
