@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-
+var Connection = require('tedious').Connection;
+var Request = require('tedious').Request;
 
 app.listen(5000);
 
@@ -12,8 +13,7 @@ app.get('/', function (req, res) {
 
 
 
-// var Connection = require('tedious').Connection;
-// var Request = require('tedious').Request;
+
 // var config = {
 //     server: 'localhost',    //the IP of the machine where SQL Server runs
 //     authentication: {
