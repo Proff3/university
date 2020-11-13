@@ -16,7 +16,7 @@ var config = {
     },
     options: {
         encrypt: false,
-        database: 'AbonentPlus',  //ssssthe username above should have granted permissions in order to access this DB.
+        database: 'AbonentPlus',  //the username above should have granted permissions in order to access this DB.
     }
 }
 
