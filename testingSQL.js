@@ -6,7 +6,7 @@ var Request = require('tedious').Request;
 app.listen(5000);
 
 var config = {
-    server: 'localhost',    //the IP of the machine where SQL Server runs
+    server: 'localhost',    //asdfsdafsdfsthe IP of the machine where SQL Server runs
     authentication: {
         type: 'default',
         options: {
